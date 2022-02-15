@@ -41,41 +41,38 @@ body {
 }
 
 .header-logo {
-  width:185px;
-  height: 40px;
+  max-width: 185px;
+  /*width: 185px;*/
+  /*height: 40px;*/
+  height: 2.5rem;
 }
 .burger {
   display: none;
-  width:185px;
-  height: 40px;
-}
+ }
 .header-title {
-  max-width: 744px;
+  max-width: 740px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   margin-top: 108px;
 }
-
-
 .title-description {
   color: white;
   font-family: OpenSans-Bold, Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
-  font-size: 45px;
-  line-height: 74px;
+  /*font-size: 45px;*/
+  font-size: 2.8rem;
+  /*line-height: 74px;*/
+  line-height: 4.6rem;
 }
-
 .menu-list-item {
   display: inline-block;
   text-align: right;
 }
-
 .menu-list-item:nth-child(n+2) {
   margin-left: 33px;
 }
-
 .menu-link {
   color: white;
   text-decoration: none;
@@ -116,7 +113,6 @@ body {
   color: #ffffff;
 }
 .trend_block {
- /* width: 100%;*/
   max-width: 1200px; 
   margin-left: auto;
   margin-right: auto;
@@ -133,18 +129,25 @@ body {
 
 .trend_now_card {
   width: 24%;
-  padding-left: 0.5%;
+  margin-left:10px;
   text-align: center;
   position: relative;
 }
-.trend_now_card:first-child { 
-  padding-left: 0;
-}
 .trend_card img{
- height: 100%;
+  height: 100%;
   width: 100%;
- 
  }
+.trend_card::after {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  opacity: 0.8;
+}
+ 
 .card-header-trend {
   text-align: left;
   border: 3px solid #b59f5b;
@@ -153,20 +156,22 @@ body {
   margin: 5%;
   padding: 5%;
 }
+
 /*Main*/
 .post-main {
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+  justify-content: space-between;
   max-width: 1200px;
   padding: 60px 15px 20px;
 }
 
 .post-list {
-  margin-right: 114px;
-  width: 785px;
-  
+  /*margin-right: 114px;*/
+  max-width: 785px;
+  flex-grow: 1;
   
 }
 
@@ -237,8 +242,8 @@ body {
 }
 
 .foto {
-  width: 380px;
-  height: 296px;
+  max-width: 380px;
+  max-height: 296px;
 }
 
 .card {
@@ -252,12 +257,12 @@ body {
 }
 
 .all-text-content-here {
-  width: 350px;
+  max-width: 350px;
   margin-left: 30px;
 }
 
 .news-2 {
-  width: 290px;
+  max-width: 290px;
 }
 .news-2-newsletter {
   margin-bottom: 49px;
@@ -290,7 +295,6 @@ body {
   line-height: 29px;
   font-family: OpenSans-Bold,Arial,sans-serif;
   margin-bottom: 30px;
-  padding-top: 30px;
 }
 
 .news-2-name1::after {
@@ -314,13 +318,13 @@ body {
 }
 
 .foto-content-2 {
-  width: 70px;
-  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .card-2-header {
   margin-left: 18px;
-  width: 200px;
+  max-width: 200px;
 }
 
 .card-2-date {
@@ -499,7 +503,7 @@ body {
   text-transform: uppercase; 
   font-size: 18px;
   line-height: 29px;
- f ont-family: OpenSans-Bold,Arial,sans-serif;
+  font-family: OpenSans,Arial,sans-serif;
   font-weight: bold;
 }
 .product_price1 {
@@ -522,8 +526,8 @@ body {
   font-size: 20px;
 }
 .handmade_body {
-  width: 300px;
-  height: 210px;
+  max-width: 300px;
+  max-height: 210px;
   border: 3px solid #b59f5b;
   margin-top: -30px;
   padding: 20px;
@@ -533,6 +537,7 @@ body {
 .handmade_content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .handmade_card {
   width: 33.33%;
@@ -562,7 +567,7 @@ a {
   color: white;
   font-size: 14px;
   line-height: 36px;
-  font-family: OpenSans-Bold,Arial,sans-serif;
+  font-family: OpenSans,Arial,sans-serif;
 }
 .handmade_price_button {
   display: flex;
@@ -746,47 +751,119 @@ a {
   padding-left: 20px;
 }
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1200px), 
+(max-width: 641px) and (orientation: landscape) {
 .menu {
   display: none;
 }
-
-.trend_now_card {
-   flex-basis: 50%;
-}
 .burger {
-display: initial;
+  display: flex;
+  justify-content: flex-end; 
+ }
+.burger_img {
+    background-repeat: no-repeat;
+    width: 40px; 
+    height: 40px;
+} 
+.post-main {
+  /*flex-basis: 100%;*/
 }
+.post-list {
+  margin-right: 1%;
+  max-width: 60%;
+}
+.foto-content {
+  max-width: 340px;
+}
+.foto {
+  width: 100%;
+}
+.news-2 {
+  max-width: 38%;
+}
+.search {
+  width: 100%;
+}
+.form {
+ width: 100%; 
+}
+.trend_now_card {
+   flex-basis: 45%;
+}
+.articles-socials {
+  width: 100%;  
+}
+.handmade_content {
+  flex-basis: 100%; 
+}
+.handmade_card {
+  margin: 1%;
+  width: 45%;
+}
+
 }
  
 
-@media (max-width: 641px) {
+@media (max-width: 641px) and (orientation: portrait ) {
+.header {
+  background-image: url(../images/banner-mobile.jpg);
+  height: auto;
+}
+.trend_now_card {
+  width: 100%;
+}
+.header-shapka {
+  height: 50vh;
+  align-content:center;
+}
+.header-logo {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+.header-title {
+  margin-top: 0;
+}
 .menu {
   display: none;
 }
-
-.trend_now_card {
-  flex-basis: 100%;
-}
-/*.handmade_blok {
+.handmade_content {
   flex-basis: 100%; 
-}*/
-.handmade_card {
-  margin: 15px;
-  width: 100%;
-
 }
- .card {
+.handmade_card {
+  margin: 1%;
   width: 100%;
+}
+ .post-main {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .burger {
-display: initial;
+  display: flex;
+ justify-content: flex-end; 
+ }
+.burger_img {
+    background-repeat: no-repeat;
+    width: 40px; 
+    height: 40px; 
 }
 .articles-socials {
-  max-width: 640px;  
+  max-width: 360px;  
 }
 .news-2 {
-  width: 100%;  
+  width:100%;  
+  margin-left: auto;
+  margin-right: auto;
+}
+.tags {
+  width: 100%;
+  align-content: space-between;
+}
+.tags-1 {
+ margin-right: 2%;
+ margin-bottom: 2%;
+}
 
 }
-}
+
