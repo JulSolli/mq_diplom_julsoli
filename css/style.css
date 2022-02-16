@@ -501,7 +501,7 @@ body {
 }
 .product_price, .product_price1, .handmade-name {
   text-transform: uppercase; 
-  font-size: 18px;
+  /*font-size: 18px;*/
   line-height: 29px;
   font-family: OpenSans,Arial,sans-serif;
   font-weight: bold;
@@ -519,15 +519,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 1300px;
-  
 }
 .handmade-name {
   text-decoration: none;
   font-size: 20px;
 }
 .handmade_body {
-  max-width: 300px;
-  max-height: 210px;
+  width: 300px;
+  height: 210px;
   border: 3px solid #b59f5b;
   margin-top: -30px;
   padding: 20px;
@@ -556,7 +555,6 @@ a {
    height: 227px;
   background-color: #b59f5b;
  }
-
 .handmade_button {
   width: 150px;
   display: block; 
@@ -585,11 +583,9 @@ a {
   background-position: center;
   display: inline-block;
 }
-
 .socials-item:nth-child(n+2) {
   margin-left: 30px;
 }
-
 .socials-link-twitter {
   background-image: url(../svg/004-twitter.svg);
   background-repeat: no-repeat;
@@ -597,7 +593,6 @@ a {
   height: 22px;
   display: block;
 }
-
 .socials-link-pinterest {
   background-image: url(../svg/001-pinterest.svg);
   background-repeat: no-repeat;
@@ -605,7 +600,6 @@ a {
   height: 22px; 
   display: block;
 }
-
 .socials-link-facebook {
   background-image: url(../svg/002-facebook-logo.svg);
   background-repeat: no-repeat;
@@ -614,7 +608,6 @@ a {
   display: block;
   background-size: 22px;
 }
-
 .socials-link-instagram {
   background-image: url(../svg/005-instagram.svg);
   background-repeat: no-repeat;
@@ -622,7 +615,6 @@ a {
   height: 22px; 
   display: block;
 }
-
 .socials-link-tumblr {
   background-image: url(../svg/003-tumblr.svg);
   background-repeat: no-repeat;
@@ -630,7 +622,6 @@ a {
   height: 22px; 
   display: block;
 }
-
 .articles-socials {
   text-align: center;
   font-style: normal;
@@ -642,11 +633,9 @@ a {
   padding: 30px 15px;
   box-sizing: border-box;
 }
-
 .socials {
   margin: 0;
 }
-
 .copyrights {
   margin-top: 70px;
   margin-bottom: 20px;
@@ -655,12 +644,12 @@ a {
   line-height: 36px; 
   text-align: center;
 }
-
 .copyright {
   text-decoration: none;
   list-style-type: none;
   color: #999999;
 }
+
 /*popup*/
 .form-group-popup:nth-child(n+2) {
   margin-top: 20px;
@@ -765,9 +754,6 @@ a {
     width: 40px; 
     height: 40px;
 } 
-.post-main {
-  /*flex-basis: 100%;*/
-}
 .post-list {
   margin-right: 1%;
   max-width: 60%;
@@ -800,10 +786,8 @@ a {
   margin: 1%;
   width: 45%;
 }
-
 }
  
-
 @media (max-width: 641px) and (orientation: portrait ) {
 .header {
   background-image: url(../images/banner-mobile.jpg);
