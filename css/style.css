@@ -736,7 +736,7 @@ a {
   padding-left: 20px;
 }
 
-@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait), (max-width: 641px) and (orientation: landscape) {
+@media (min-width: 641px) and (max-width: 1200px) {
 .menu {
   display: none;
 }
@@ -794,7 +794,7 @@ a {
 }
 }
  
-@media (max-width: 641px) and (orientation: portrait) {
+@media (max-width: 641px) {
 .header {
   background-image: url(../images/banner-mobile.jpg);
   height: 100vh;
